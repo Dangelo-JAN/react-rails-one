@@ -24,13 +24,6 @@ const fetchGreetings = async () => {
 
 // Action Creators
 export const getGreetings = () => async (dispatch) => {
-  const result = await fetchGreetings();
-  const greetings = Object.entries(result).map(([itemId, [greeting]]) => ({
-    id: itemId,
-    title: greeting.message,
-  }));
-  dispatch({
-    type: GET,
-    payload: greetings,
-  });
+  const greetings = await fetchGreetings();
+  dispatch({ type: GET, payload: greetings });
 };
