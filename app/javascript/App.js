@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import HelloContainer from './components/HelloContainer';
-import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (

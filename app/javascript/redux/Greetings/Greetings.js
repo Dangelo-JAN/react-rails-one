@@ -5,7 +5,6 @@ const initialState = [];
 
 // Reducer
 export default function greetingsReducer(state = initialState, action) {
-  // const greetings = [...state, action.payload];
   switch (action.type) {
     case GET:
       return action.payload;

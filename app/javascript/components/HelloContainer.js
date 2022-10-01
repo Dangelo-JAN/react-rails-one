@@ -7,25 +7,18 @@ const Greeting = () => {
   const { greeting } = useSelector((state) => state.greetings);
 
   useEffect(() => {
-    dispatch(getGreetings);
+    dispatch(getGreetings());
   }, []);
 
   return (
     <>
       <div>
-        <h1>      
+        <h1>
           {greeting}
           {' '}
           World!
         </h1>
       </div>
-
-      <div>
-        <h1>      
-          Welcome to greeting app!
-        </h1>
-        <h1>Hello World! hi desde el hello container 2.1</h1>
-      </div>      
     </>
   );
 };
